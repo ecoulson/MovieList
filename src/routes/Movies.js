@@ -20,7 +20,7 @@ router.post("/", (req, res, next) => {
         });
     } else {
         const movie = new MovieModel({
-            movieID: req.body._id,
+            movieID: req.body.movieID,
             title: req.body.title,
             rating: req.body.rating,
             dateReleased: req.body.dateReleased,

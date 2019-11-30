@@ -68,7 +68,7 @@ export default class AddMovieBar extends React.Component {
 
     createMovieFromEntry(entry) {
         return {
-            _id: entry.id,
+            movieID: entry.id,
             title: entry.original_title,
             rating: entry.vote_average,
             dateReleased: entry.release_date,

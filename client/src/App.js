@@ -88,7 +88,7 @@ export default class App extends React.Component {
 	}
 
 	deleteMovie(movie) {
-		fetch(`/movies/${movie._id}`, {
+		fetch(`/movies/${movie.movieID}`, {
 			method: "DELETE",
 		}).catch((err) => {
 			alert(err);
