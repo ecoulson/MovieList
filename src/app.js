@@ -12,6 +12,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
+// 
 mongoose.connect(process.env.CONNECTION_STRING, {
     useNewUrlParser: true,
     useUnifiedTopology: true
