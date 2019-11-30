@@ -1,0 +1,10 @@
+.movie-rating {
+    font-size: 25px;
+    color: forestgreen;
+}
+
+@media screen and (min-width: 720px) {
+    .movie-rating {
+        font-size: 30px;
+    }
+}

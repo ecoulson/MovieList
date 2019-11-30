@@ -1,0 +1,12 @@
+.movie-title {
+    padding: 0px;
+    color: rgb(225, 225, 225);
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+@media screen and (min-width: 720px) {
+    .movie-title {
+        font-size: 30px;
+    }
+}

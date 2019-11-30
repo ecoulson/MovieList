@@ -1,0 +1,8 @@
+body, html {
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: rgb(25, 25, 25);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

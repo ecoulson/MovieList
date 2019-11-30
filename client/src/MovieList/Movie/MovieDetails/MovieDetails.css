@@ -1,0 +1,8 @@
+.movie-details {
+    margin: 25px;
+    width: calc(100% - 278px);
+}
+
+.movie-info {
+    display: flex;
+}

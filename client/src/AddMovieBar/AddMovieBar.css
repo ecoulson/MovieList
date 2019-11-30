@@ -1,0 +1,11 @@
+.add-movie-bar-container {
+    margin: 5px 5%;
+    width: 90%;
+    height: 40px;
+    display: flex;
+    transition: 0.5s ease-in-out;
+}
+
+.add-movie-bar-container {
+    transform: scale(1.05);
+}

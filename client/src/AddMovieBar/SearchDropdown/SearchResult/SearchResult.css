@@ -1,0 +1,22 @@
+.search-result {
+    font-size: 18px;
+    padding: 10px;
+    transition: 0.25s ease-in-out;
+    display: flex;
+}
+
+.search-result:hover {
+    color: white;
+    cursor: pointer;
+    background-color: forestgreen;
+}
+
+.search-img {
+    width: 35px;
+    height: 50px;
+}
+
+.search-title {
+    padding-left: 25px;
+    margin-top: 17px;
+}

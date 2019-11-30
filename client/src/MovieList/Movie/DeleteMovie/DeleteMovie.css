@@ -1,0 +1,20 @@
+.delete-container {
+    height: 100%;
+    padding: 0 25px;
+    border-radius: 0px 5px 5px 0px;
+    transition: 0.5s all ease;
+}
+
+.delete-container:hover {
+    background-color: rgb(180, 15, 15);
+}
+
+.delete-container:hover > .fa-trash {
+    color: rgb(225, 225, 225);
+}
+
+.fa-trash {
+    transition: 0.5s all ease;
+    z-index: 1;
+    margin-top: 72px;
+}
