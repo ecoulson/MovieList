@@ -55,6 +55,7 @@ export default class AddMovieBar extends React.Component {
 
     createMovie() {
         this.searchForMovie().then((results) => {
+            console.log(this.getEntryFromResults(results));
             this.props.addMovie(this.createMovieFromEntry(this.getEntryFromResults(results)));
             this.setState({
                 currentInput: "",
@@ -67,6 +68,7 @@ export default class AddMovieBar extends React.Component {
 
     createMovieFromEntry(entry) {
         return {
+            _id: entry.id,
             title: entry.original_title,
             rating: entry.vote_average,
             dateReleased: entry.release_date,

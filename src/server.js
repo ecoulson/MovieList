@@ -13,12 +13,12 @@ require('dotenv').config();
  * Get port from environment and store in Express.
  */
 
-let argPort = '3001';
+let argPort = '8080';
 if (process.argv.length >= 2) {
 	argPort = process.argv[2];
 }
 
-var port = normalizePort(process.env.PORT || argPort || '3000');
+var port = normalizePort(process.env.PORT || argPort || '8080');
 app.set('port', port);
 
 /**

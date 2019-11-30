@@ -1,8 +1,14 @@
 .movie-details {
     margin: 25px;
-    width: calc(100% - 278px);
+    width: 100%;
 }
 
 .movie-info {
-    display: flex;
+    display: none;
+}
+
+@media all and (min-width: 640px) {
+    .movie-info {
+        display: flex;
+    }
 }

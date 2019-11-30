@@ -1,5 +1,12 @@
 .movie-image {
     border-radius: 5px;
-    width: 150px;
-    height: 200px;
+    width: 75px;
+    height: 100px;
+}
+
+@media all and (min-width: 640px) {
+    .movie-image {
+        width: 150px;
+        height: 200px;
+    }
 }

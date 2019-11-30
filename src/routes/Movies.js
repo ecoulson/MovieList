@@ -4,53 +4,49 @@ const MovieModel = require('../models/MovieModel');
 router.get("/", async (req, res, next) => {
     try {
         const results = await MovieModel.find().exec();
-        res.json(results).status(200);
-        return next();
+        return res.status(200).json(results);
     } catch(err) {
-        res.json({
+        return res.status(500).json({
             error: err
-        }).status(500);
-        return next(err);
+        });
     } 
 });
 
 router.post("/", (req, res, next) => {
     if (!req.body.title || !req.body.dateReleased ||
         !req.body.rating || !req.body.posterURL) {
-        res.json({
+        return res.status(500).json({
             success: false
-        }).status(500);
-        
-        return next("Missing proporties on the body")
+        });
     } else {
         const movie = new MovieModel({
+            movieID: req.body._id,
             title: req.body.title,
             rating: req.body.rating,
             dateReleased: req.body.dateReleased,
             posterURL: req.body.posterURL
         });
         movie.save().then(() => {
-            res.json({
-                success: true
+            res.status(200).json({
+                success: true,
+                movie: movie
             }).status(200);
-            return next();
         }).catch((err) => {
-            res.json({
+            res.status(500).json({
                 success: false
             }).status(500);
-            return next(err);
         })
     }
 });
 
-router.delete("/:id", (req, res, next) => {
+router.delete("/:id", async (req, res, next) => {
     try {
-        MovieModel.findByIdAndDelete(req.params.id).exec();
-        res.json({ success: true }).status(200);
-        return next();
+        await MovieModel.findOneAndDelete({
+            movieID: req.params.id
+        }).exec();
+        return res.status(200).json({ success: true })
     } catch (err) {
-        res.json({ success: false }).status(500);
-        return next(err);
+        return res.status(500).json({ success: false })
     }
 })
 

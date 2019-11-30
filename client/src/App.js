@@ -37,7 +37,7 @@ export default class App extends React.Component {
 				movies: await response.json()
 			})
 		}).catch((err) => {
-			console.log(err);
+			console.error(err);
 		})
 	}
 
