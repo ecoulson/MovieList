@@ -5,7 +5,8 @@ const MovieSchema = new mongoose.Schema({
     rating: 'number',
     dateReleased: 'string',
     posterURL: 'string',
-    movieID: 'number'
+    movieID: 'number',
+    overview: 'string'
 })
 
 module.exports = mongoose.model('Movie', MovieSchema);

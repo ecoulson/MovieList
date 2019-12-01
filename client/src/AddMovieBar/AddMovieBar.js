@@ -71,6 +71,7 @@ export default class AddMovieBar extends React.Component {
             movieID: entry.id,
             title: entry.original_title,
             rating: entry.vote_average,
+            overview: entry.overview,
             dateReleased: entry.release_date,
             posterURL: `http://image.tmdb.org/t/p/w200//${entry.poster_path}`
         }

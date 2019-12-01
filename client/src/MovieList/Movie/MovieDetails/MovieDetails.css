@@ -1,5 +1,6 @@
 .movie-details {
-    margin: 25px;
+    margin: 0px;
+    margin-left: 10px;
     width: 100%;
 }
 
@@ -7,8 +8,21 @@
     display: none;
 }
 
+.movie-overview {
+    color: rgb(200, 200, 200);
+    font-size: 18px;
+    margin-top: 15px;
+}
+
 @media all and (min-width: 640px) {
+    .movie-details {
+        margin: 25px;
+    }
     .movie-info {
         display: flex;
+    }
+
+    .movie-overview {
+        font-size: 22px;
     }
 }

@@ -21,6 +21,7 @@ router.post("/", (req, res, next) => {
     } else {
         const movie = new MovieModel({
             movieID: req.body.movieID,
+            overview: req.body.overview,
             title: req.body.title,
             rating: req.body.rating,
             dateReleased: req.body.dateReleased,
