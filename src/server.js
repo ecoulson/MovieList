@@ -18,7 +18,7 @@ if (process.argv.length >= 2) {
 	argPort = process.argv[2];
 }
 
-var port = normalizePort(process.env.PORT || argPort || '8080');
+var port = normalizePort(process.env.APP_SERVER_PORT || argPort || '8080');
 app.set('port', port);
 
 /**
